@@ -14,9 +14,17 @@ Reload the file or restart Vim, then you can,
 :PlugDiff to review the changes from the last update
 :PlugClean to remove plugins no longer in the list
 
-***zimfw***
 
+***zimfw***
 ```shell
 ### Install
 curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
+### Install fzf
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew install fzf
+```
+
+***zsh***
+```shell
+chsh -s /bin/zsh
 ```
