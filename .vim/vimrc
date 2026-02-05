@@ -1,0 +1,55 @@
+syntax on
+set number
+set norelativenumber
+set cursorline
+set wrap
+set showcmd
+set wildmenu
+set hlsearch
+exec "nohlsearch"
+set incsearch
+set ignorecase
+set smartcase
+
+set nocompatible
+filetype on
+filetype indent on
+filetype plugin on
+filetype plugin indent on
+set encoding=utf-8
+let &t_ut=''
+set expandtab
+set tabstop=2
+set backspace=indent,eol,start
+
+"reload current file"
+map R :source $MYVIMRC<CR>
+
+"split motion setting"
+map s <nop>
+map sl :set splitright<CR>:vsplit<CR>
+map sh :set nosplitright<CR>:vsplit<CR>
+map sk :set nosplitbelow<CR>:split<CR>
+map sj :set splitbelow<CR>:split<CR>
+
+"at split, move sursor to aim window "
+map sa <C-w>h
+map ss <C-w>j
+map sw <C-w>k
+map sd <C-w>l
+
+"change window size"
+map <C-j> :res +5<CR>
+map <C-k> :res -5<CR>
+map <C-h> :vertical resize-5<CR>
+map <C-l> :vertical resize+5<CR>
+
+"tabe options"
+map ti :tabe<CR>
+map tn :tabnext<CR>
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'vim-airline/vim-airline'
+
+call plug#end()
